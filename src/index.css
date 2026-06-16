@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-premium-black text-white font-sans antialiased selection:bg-premium-neon selection:text-black;
+  }
+}
+
+@layer components {
+  .btn-neon {
+    @apply px-8 py-3 bg-premium-neon text-black font-bold rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,255,0,0.3)];
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 bg-transparent border-2 border-white/10 text-white font-bold rounded-xl transition-all duration-300 hover:border-premium-neon hover:text-premium-neon;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-marketplace;
+  }
+
+  .marketplace-tab-active {
+    @apply text-premium-neon border-b-2 border-premium-neon pb-2 font-black uppercase tracking-widest text-xs;
+  }
+
+  .marketplace-tab-inactive {
+    @apply text-gray-500 pb-2 font-bold uppercase tracking-widest text-xs hover:text-white transition-colors;
+  }
+}
